@@ -1,0 +1,42 @@
+{
+  "name": "predict-your-thoughts",
+  "version": "1.0.0",
+  "description": "AI-assisted notepad with predictive writing and cost controls",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite --host 0.0.0.0 --config vite.config.ts",
+    "build:client": "vite build --config vite.config.ts",
+    "preview": "vite preview --config vite.config.ts",
+    "dev:server": "tsx watch src/server/index.ts",
+    "build:server": "tsc -p tsconfig.server.json",
+    "start:server": "node dist/server/index.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build:server && npm run build:client",
+    "start": "npm run start:server",
+    "typecheck": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.client.json --noEmit"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.14"
+  }
+}
