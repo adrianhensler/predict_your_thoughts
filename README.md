@@ -1,3 +1,5 @@
+It 'works' but needs effort to improve results. -A
+
 # Predict Your Thoughts
 
 Predict Your Thoughts is a web notepad that generates a likely next sentence while you type, then gives concise writing suggestions.
